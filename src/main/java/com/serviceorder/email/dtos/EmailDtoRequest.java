@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.validation.constraints.Email;
+import java.time.LocalDateTime;
 
 @Data
 public class EmailDtoRequest {
@@ -16,5 +17,6 @@ public class EmailDtoRequest {
     private String subject;
     @Column(columnDefinition = "TEXT")
     private String text;
+    private LocalDateTime sendDateEmail;
 
 }
